@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		
+		<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.box {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#pink {
+	background-color: #e84949;
+	padding: 0.8rem 2.3rem;
+	color: white;
+	box-shadow: 5px 5px 7px 0px #0000003f;
+	position: relative;
+	z-index: 5;
+}
+
+#pink::before {
+	content: "";
+	background-color: #1f1f1f;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: all 1s;
+	z-index: -1;
+}
+
+#pink:hover::before {
+	transform: scaleX(1);
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<button id="pink">Chomu</button>
+		</div>
+	</body>
+</html>
